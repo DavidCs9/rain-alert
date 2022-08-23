@@ -1,15 +1,15 @@
 import requests
 from twilio.rest import Client
 
-account_sid = "AC8ce8f8153438ab4fc94909710879a6a1"
-auth_token = "0edd6c1605d6cc8923039a4db09167b6"
-
+account_sid = "yourkeys"
+auth_token = "yourkeys"
 parameters = {
-    "lat": 24.446430,
-    "lon": -104.123657,
+    "lat": "yourlat",
+    "lon": "yourlon",
     "exclude": "current,minutely,daily",
-    "appid": "0c08defaff8ea71a860b5f0bb51795cb"
+    "appid": "yourkeys"
 }
+
 
 will_rain = False
 
@@ -27,8 +27,8 @@ if will_rain:
     message = client.messages \
         .create(
         body="Va a llover. Ponte una chamarra!!. ☂️",
-        from_='+15306758720',
-        to='+526141695881'
+        from_='+theirnumber',
+        to='+yourname'
         )
 
 
